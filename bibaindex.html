@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог продуктів</title>
+  <link rel="stylesheet" href="bibastyles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Каталог продуктів</h1>
+    <div class="controls">
+      <input type="search" id="search" placeholder="Пошук товарів..." aria-label="Пошук товарів">
+      <select id="categoryFilter" aria-label="Фільтр за категорією">
+        <option value="all">Усі категорії</option>
+        <option value="electronics">Електроніка</option>
+        <option value="books">Книги</option>
+      </select>
+      <select id="sortSelect" aria-label="Сортування">
+        <option value="default">Сортувати за</option>
+        <option value="priceAsc">Ціна: низька → висока</option>
+        <option value="priceDesc">Ціна: висока → низька</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <div class="card-container" id="productList">
+      <article class="card" data-category="electronics" data-price="22999">
+        <img src="https://via.placeholder.com/150" alt="Фото ноутбука">
+        <h2 class="product-title">Ноутбук ABC</h2>
+        <p class="price">₴22 999.00</p>
+        <button class="btn" aria-label="Купити Ноутбук ABC">Купити</button>
+      </article>
+      <article class="card" data-category="books" data-price="1299">
+        <img src="https://via.placeholder.com/150" alt="Фото книги">
+        <h2 class="product-title">Книга DEF</h2>
+        <p class="price">₴1 299.00</p>
+        <button class="btn" aria-label="Купити Книгу DEF">Купити</button>
+      </article>
+    </div>
+  </main>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <h3 id="modalTitle">Підпишіться на оновлення</h3>
+      <button class="close" aria-label="Закрити вікно">&times;</button>
+      <form id="subscribeForm">
+        <label for="email">Ваш Email:</label>
+        <input type="email" id="email" required placeholder="example@mail.com">
+        <button type="submit" class="btn">Підписатися</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="bibascript.js"></script>
+</body>
+</html>
